@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portlyn - Hub</title>
+    <title>Jackle Web</title>
     <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&family=Martian+Mono:wght@100..800&display=swap');
+        
         * {
             margin: 0;
             padding: 0;
@@ -12,9 +15,10 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            background: #0a0a0a;
-            color: #ffffff;
+            font-family: "Martian Mono", monospace;
+            font-style: Regular;
+            background: #ffffff;
+            color: #000000;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -58,28 +62,6 @@
             overflow: hidden;
         }
 
-        .nav-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(100, 255, 218, 0.1), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .nav-card:hover::before {
-            left: 100%;
-        }
-
-        .nav-card:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: #64ffda;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(100, 255, 218, 0.2);
-        }
-
         .nav-card h2 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
@@ -96,30 +78,16 @@
             color: #666;
             font-size: 0.9rem;
         }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .nav-grid {
-                grid-template-columns: 1fr;
-            }
-        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Portlyn Hub</h1>
+        <h1>Jackle Web</h1>
         
         <div class="nav-grid">
-            <a href="https://qwrench.github.io/PortlynMC-map/index.html" class="nav-card">
-                <h2>PortlynMC - Map</h2>
-                <p>The PortlynMC City Map (WIP)</p>
-            </a>
-            <a href="https://qwrench.github.io/DiscordBot/index.html" class="nav-card">
-                <h2>Portlyn - Discord Bot</h2>
-                <p>The Portlyn Discord Bot (WIP)</p>
+            <a href="https://qwrench.github.io/NatureSim/index.html" class="nav-card">
+                <h2>Nature Simulator</h2>
+                <p>A Nature Simulator (WIP)</p>
             </a>
         <div class="footer">
             <p>&copy; 2025 - All Rights reserved.</p>
