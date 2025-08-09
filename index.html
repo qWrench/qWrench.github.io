@@ -272,7 +272,7 @@
                     <div class="program-icon">RT</div>
                     <h3>Ribble Editor</h3>
                     <p>A Simple, Lightweigt Text Editor.</p>
-                    <button class="download-btn" onclick="downloadProgram('Ribble Editor-win32-x64.zip')">Ribble Editor-win32-x64.zip</button>
+                    <button class="download-btn" onclick="downloadProgram('https://www.mediafire.com/file/ef9f35z16bpgiuo/Ribble_Editor-win32-x64.zip/file')">Ribble Editor-win32-x64.zip</button>
                 </div>
             </div>
         </div>
@@ -282,8 +282,8 @@
         <div class="container">
             <div class="about-text fade-in">
                 <h2>About</h2>
-                <p>I create simple software solutions focused on usability and performance.</p>
-                <p>This is a personal project, not an official company. Each program is designed to solve specific problems without unnecessary complexity.</p>
+                <p>I create simple software solutions focused on performance.</p>
+                <p>This is a personal project, not an official company. Each program is designed without unnecessary complexity.</p>
             </div>
             <div class="stats fade-in">
                 <div class="stat-item">
@@ -322,30 +322,10 @@
             observer.observe(el);
         });
 
-        function downloadProgram(programName) {
-            const notification = document.createElement('div');
-            notification.style.cssText = `
-                position: fixed;
-                top: 100px;
-                right: 20px;
-                background: #ff4444;
-                color: white;
-                padding: 15px 25px;
-                border-radius: 8px;
-                z-index: 10000;
-                animation: slideIn 0.3s ease;
-            `;
-            notification.innerHTML = `${programName} downloading...`;
-            
-            document.body.appendChild(notification);
-            
-            setTimeout(() => {
-                notification.style.animation = 'slideOut 0.3s ease';
-                setTimeout(() => {
-                    document.body.removeChild(notification);
-                }, 300);
-            }, 3000);
+        function downloadProgram(url) {
+            window.open(url, '_blank');
         }
+
 
         const style = document.createElement('style');
         style.textContent = `
